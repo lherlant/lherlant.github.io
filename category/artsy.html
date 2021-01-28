@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Laura Herlant - Artsy</title>
+    <meta name="description" content="">
+    <meta name="author" content="Laura Herlant">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+    <script src="../theme/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le styles -->
+    <link href="../theme/bootstrap.min.css" rel="stylesheet">
+    <link href="../theme/bootstrap.min.responsive.css" rel="stylesheet">
+    <link href="../theme/local.css" rel="stylesheet">
+    <link href="../theme/pygments.css" rel="stylesheet">
+
+    <!-- So Firefox can bookmark->"abo this site" -->
+
+</head>
+
+<body>
+
+<div class="navbar">
+    <div class="navbar-inner">
+    <div class="container">
+
+         <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+             <span class="icon-bar"></span>
+             <span class="icon-bar"></span>
+             <span class="icon-bar"></span>
+         </a>
+
+        <a class="brand" href="..">Laura Herlant</a>
+
+        <div class="nav-collapse">
+        <ul class="nav">
+            
+            <li><a href="../pages/about-me.html">About</a></li>
+        </ul>
+        </div>
+        
+    </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="content">
+    <div class="row">
+
+        <div class="span9">
+        
+
+        
+
+
+    <div class='article'>
+        <div class="content-title">
+            <a href="../roots.html"><h1>Roots</h1></a>
+Fri 17 January 2020
+
+by <a class="url fn" href="../author/laura-herlant.html">Laura Herlant</a>
+ 
+
+
+ 
+        </div>
+        
+        <div><p><img alt="Roots visualization for constant water" src="/images/roots_constant.jpg"></p>
+<h2>What this is</h2>
+<p>This is a fun visualization which is analogous to the roots of a plant growing. Essentially, there is some distribution of water in a 2-D ground surface <em>w(x,y)</em>, and a seed planted at the origin. The plant itself is naturally modeled as a tree structure, with the root being the origin node. </p>
+<p>At each time step, the following happens:</p>
+<ul>
+<li>The plant "grows": a random node is selected. A random direction is chosen, and a new node is created in that direction to become a new leaf node.</li>
+<li>The plant "adapts": paths from the leaves to the root that are undercapacity are widened. Paths from the leaves to the root that are overcapacity are narrowed.</li>
+<li>The water function is updated if the water source is changing with time</li>
+<li>A visualization is saved</li>
+</ul>
+<h3>Growing</h3>
+<p>I played around with several different ways to "grow" the plant. I tried picking randomly from among the leaves. This makes for very long strings of segments. I tried selecting the node farthest from any other nodes. This also led to long stringy trees. I finally settled on just randomly picking nodes. For the direction of the new growth, I also tried a few more sophisticated techniques. I tried picking the direction farthest away from existing nodes. This led to a perfectly symmetrical growth, essentially a breadth first-search going outward. This did mean that if there was only water nearby the origin, there was no way to loop back to it. Eventually I decided that random was best all around.</p>
+<h3>Adapting</h3>
+<p>In a real plant (I imagine), roots which no longer get any water shrivel and die off. Roots that tap into a large source of water get enlarged to provide increased capacity. That was the reasoning behind the adaptation step. </p>
+<p>To implement capacity, each node had to keep track of the water flowing in and the water flowing out. To update, I did a full tree traversal from deepest to shallowest, and updated the output of each node to be the minimum of the sum of water in (from other root segments attached or the water function if it was a leaf node), and the current node capacity. The water input is calculated by the minimum of its capacity and the summation of the output of each of the root segments that feed into it. </p>
+<p>The capacity of each root segment is driven to match the water flowing in by a proportional controller. In this way, the root segments grow or shrink smoothly to the appropriate size. If a node shrinks beyond a certain threshold, it and its children are removed. </p>
+<h3>Animating</h3>
+<p>To animate this I used matplotlib's <code>FuncAnimation</code>. To render all the line segments, I used a <code>LineCollection</code>. I colored the line segments based on depth in the tree and a colormap. The figure autoscales based on the max and min root location. The water function is rendered as a background with darker blue having more water available. A number of little tweaks were required to make it more aesthetically pleasing -- for example rounded line segments, the right colormaps, etc.</p>
+<h2>Results</h2>
+<h3>Constant water</h3>
+<video width="600" controls="controls">
+  <source type="video/mp4" src="images/roots.mp4"></source>
+  <p>Your browser does not support the video element.</p>
+</video>
+
+<h2>Where this came from</h2>
+<p>I've been stewing around the idea of batch ordering mattering a lot when training neural networks in the context of supervised learning with mini-batches. Could the ordering of </p></div>
+        <hr />
+    </div>
+		
+<div class="pagination">
+<ul>
+    <li class="prev disabled"><a href="#">&larr; Previous</a></li>
+
+    <li class="active"><a href="../category/artsy.html">1</a></li>
+
+    <li class="next disabled"><a href="#">&rarr; Next</a></li>
+
+</ul>
+</div>
+ 
+  
+        </div>
+        
+        <div class="span3">
+
+            <div class="well" style="padding: 8px 0; background-color: #FBFBFB;">
+            <ul class="nav nav-list">
+                <li class="nav-header"> 
+                Site
+                </li>
+            
+                <li><a href="../archives.html">Archives</a>
+                <li><a href="../tags.html">Tags</a>
+
+
+
+
+            </ul>
+            </div>
+
+
+            <div class="well" style="padding: 8px 0; background-color: #FBFBFB;">
+            <ul class="nav nav-list">
+                <li class="nav-header"> 
+                Categories
+                </li>
+                
+                <li><a href="../category/artsy.html">Artsy</a></li>
+                <li><a href="../category/planning.html">Planning</a></li>
+                   
+            </ul>
+            </div>
+
+
+            <div class="well" style="padding: 8px 0; background-color: #FBFBFB;">
+            <ul class="nav nav-list">
+                <li class="nav-header"> 
+                Links
+                </li>
+            
+                <li><a href="http://www.lauravherlant.com">Home</a></li>
+            </ul>
+            </div>
+
+
+            <div class="social">
+            <div class="well" style="padding: 8px 0; background-color: #FBFBFB;">
+            <ul class="nav nav-list">
+                <li class="nav-header"> 
+                Social
+                </li>
+           
+                <li><a href="https://www.linkedin.com/in/lauraherlant/">Laura Herlant</a></li>
+            </ul>
+            </div>
+            </div>
+
+        </div>  
+    </div>     </div> 
+<footer>
+<br />
+<p><a href="..">Laura Herlant</a> &copy; Laura Herlant 2020</p>
+</footer>
+
+</div> <!-- /container -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script src="../theme/bootstrap-collapse.js"></script>
+ 
+</body>
+</html>
