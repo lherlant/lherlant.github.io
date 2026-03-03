@@ -3,41 +3,33 @@
 
 @string{aps = {American Physical Society,}}
 
-@book{shangtheia,
+@article{shangtheia,
   abbr            = {CoRL},
   title           = {Theia: Distilling Diverse Vision Foundation Models for Robot Learning},
   author          = {Shang, Jinghuan and Schmeckpeper, Karl and May, Brandon B and Minniti, Maria Vittoria and Kelestemur, Tarik and Watkins, David and Herlant, Laura},
   year            = {2024},
-  booktitle       = {9th Annual Conference on Robot Learning},
+  journal       = {9th Annual Conference on Robot Learning},
   html            = {https://theia.theaiinstitute.com/},
   pdf             = {theia_paper.pdf},
   bibtex_show     = {true},
+  preview         = {theia-preview.gif},
   selected        = {true},
+  abstract        = {Vision-based robot policy learning, which maps visual inputs to actions, necessitates a holistic understanding of diverse visual tasks beyond single-task needs like classification or segmentation. Inspired by this, we introduce Theia, a vision foundation model for robot learning that distills multiple off-the-shelf vision foundation models trained on varied vision tasks. Theia's rich visual representations encode diverse visual knowledge, enhancing downstream robot learning. Extensive experiments demonstrate that Theia outperforms its teacher models and prior robot learning models using less training data and smaller model sizes. Additionally, we quantify the quality of pre-trained visual representations and hypothesize that higher entropy in feature norm distributions leads to improved robot learning performance.}
 }
 
-@book{einstein1956investigations,
-  bibtex_show = {true},
-  title       = {Investigations on the Theory of the Brownian Movement},
-  author      = {Einstein, Albert},
-  year        = {1956},
-  publisher   = {Courier Corporation},
-  preview     = {brownian-motion.gif}
+@article{abouchakra2025realissim,
+      title={Real-is-Sim: Bridging the Sim-to-Real Gap with a Dynamic Digital Twin}, 
+      author={Jad Abou-Chakra and Lingfeng Sun and Krishan Rana and Brandon May and Karl Schmeckpeper and Niko Suenderhauf and Maria Vittoria Minniti and Laura Herlant},
+      year={2025},
+      html={https://realissim.rai-inst.com/}, 
+      journal = {2025 IEEE International Conference on Robotics and Automation (ICRA)},
+      pdf = {realissim_paper.pdf},
+      abstract = {We introduce real-is-sim, a new approach to integrating simulation into behavior cloning pipelines. In contrast to real-only methods, which lack the ability to safely test policies before deployment, and sim-to-real methods, which require complex adaptation to cross the sim-to-real gap, our framework allows policies to seamlessly switch between running on real hardware and running in parallelized virtual environments. At the center of real-is-sim is a dynamic digital twin, powered by the Embodied Gaussian simulator, that synchronizes with the real world at 60Hz. This twin acts as a mediator between the behavior cloning policy and the real robot. Policies are trained using representations derived from simulator states and always act on the simulated robot, never the real one. During deployment, the real robot simply follows the simulated robot’s joint states, and the simulation is continuously corrected with real world measurements. This setup, where the simulator drives all policy execution and maintains real-time synchronization with the physical world, shifts the responsibility of crossing the sim-to-real gap to the digital twin’s synchronization mechanisms, instead of the policy itself. We demonstrate real-is-sim on a long-horizon manipulation task (PushT), showing that virtual evaluations are consistent with real-world results. We further show how real-world data can be augmented with virtual rollouts and compare to policies trained on different representations derived from the simulator state including object poses and rendered images from both static and robot-mounted cameras. Our results highlight the flexibility of the real-is-sim framework across training, evaluation, and deployment stages.},
+      bibtex_show = {true},
+      preview = {realissim-preview.gif}
 }
 
-@article{einstein1950meaning,
-  abbr        = {AJP},
-  bibtex_show = {true},
-  title       = {The meaning of relativity},
-  author      = {Einstein, Albert and Taub, AH},
-  journal     = {American Journal of Physics},
-  volume      = {18},
-  number      = {6},
-  pages       = {403--404},
-  year        = {1950},
-  publisher   = {American Association of Physics Teachers}
-}
-
-@article{PhysRev.47.777,
+article{PhysRev.47.777,
   abbr              = {PhysRev},
   title             = {Can Quantum-Mechanical Description of Physical Reality Be Considered Complete?},
   author            = {Einstein*†, A. and Podolsky*, B. and Rosen*, N.},
@@ -63,57 +55,4 @@
   annotation        = {* Example use of superscripts<br>† Albert Einstein},
   selected          = {false},
   inspirehep_id     = {3255}
-}
-
-@article{einstein1905molekularkinetischen,
-  title     = {{\"U}ber die von der molekularkinetischen Theorie der W{\"a}rme geforderte Bewegung von in ruhenden Fl{\"u}ssigkeiten suspendierten Teilchen},
-  author    = {Einstein, A.},
-  journal   = {Annalen der physik},
-  volume    = {322},
-  number    = {8},
-  pages     = {549--560},
-  year      = {1905},
-  publisher = {Wiley Online Library}
-}
-
-@article{einstein1905movement,
-  abbr    = {Ann. Phys.},
-  title   = {Un the movement of small particles suspended in statiunary liquids required by the molecular-kinetic theory 0f heat},
-  author  = {Einstein, A.},
-  journal = {Ann. Phys.},
-  volume  = {17},
-  pages   = {549--560},
-  year    = {1905}
-}
-
-@article{einstein1905electrodynamics,
-  title  = {On the electrodynamics of moving bodies},
-  author = {Einstein, A.},
-  year   = {1905}
-}
-
-@article{einstein1905photoelectriceffect,
-  bibtex_show = {true},
-  abbr        = {Ann. Phys.},
-  title       = {{{\"U}ber einen die Erzeugung und Verwandlung des Lichtes betreffenden heuristischen Gesichtspunkt}},
-  author      = {Albert Einstein},
-  abstract    = {This is the abstract text.},
-  journal     = {Ann. Phys.},
-  volume      = {322},
-  number      = {6},
-  pages       = {132--148},
-  year        = {1905},
-  doi         = {10.1002/andp.19053220607},
-  award       = {Albert Einstein receveid the **Nobel Prize in Physics** 1921 *for his services to Theoretical Physics, and especially for his discovery of the law of the photoelectric effect*},
-  award_name  = {Nobel Prize}
-}
-
-@book{przibram1967letters,
-  bibtex_show = {true},
-  title       = {Letters on wave mechanics},
-  author      = {Einstein, Albert and Schrödinger, Erwin and Planck, Max and Lorentz, Hendrik Antoon and Przibram, Karl},
-  year        = {1967},
-  publisher   = {Vision},
-  preview     = {wave-mechanics.gif},
-  abbr        = {Vision}
 }
