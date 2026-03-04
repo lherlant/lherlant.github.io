@@ -282,7 +282,7 @@ display_categories: ["external-services"] # these categories will be displayed o
 
 scholar:
   last_name: [Herlant]
-  first_name: [Laura, V.]
+  first_name: [Laura, Laura V.]
 
   style: apa
   locale: en

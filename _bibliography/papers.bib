@@ -3,8 +3,9 @@
 
 @string{aps = {American Physical Society,}}
 
+
+
 @article{shangtheia,
-  abbr            = {CoRL},
   title           = {Theia: Distilling Diverse Vision Foundation Models for Robot Learning},
   author          = {Shang, Jinghuan and Schmeckpeper, Karl and May, Brandon B and Minniti, Maria Vittoria and Kelestemur, Tarik and Watkins, David and Herlant, Laura},
   year            = {2024},
@@ -29,7 +30,7 @@
       preview = {realissim-preview.gif}
 }
 
-@ARTICLE{11373870,
+@ARTICLE{kapelyukh2026zerobot,
   author={Kapelyukh, Ivan and Zhang, Xiaohan and James, Stephen and Herlant, Laura and Johns, Edward},
   journal={IEEE Robotics and Automation Letters}, 
   title={ZeroBot: Learning From Scratch in Minutes With Generative Real2Sim}, 
@@ -38,11 +39,120 @@
   number={4},
   pages={4569-4576},
   keywords={Robots;Training;Three-dimensional displays;Geometry;Visualization;Solid modeling;Reinforcement learning;Planning;Robot vision systems;Pipelines;Reinforcement learning;perception for grasping and manipulation;simulation;3D generative models},
-  doi={10.1109/LRA.2026.3662595},
   bibtex_show = {true},
   html={https://zerobot-rl.github.io/},
   pdf = {zerobot_paper.pdf},
   preview = {zerobot-preview.gif},
+  abstract = {We present ZeroBot, a real2sim framework for learning a robot manipulation task from scratch in minutes under challenging conditions: zero human demonstrations, zero policy pre-training, and zero known object models. Given only a single view of an object and a goal pose for that object, ZeroBot uses image-to-3D generative models to obtain a complete object mesh, which is used in simulation for large-scale parallel reinforcement learning. To accelerate training, we introduce an action space which leverages the generated geometry and learned value function to sample states involving robot-object contact. When evaluated on real-world tasks including grasping, pushing, articulated object interaction, and multi-stage manipulation, ZeroBot achieves an 87% success rate with an average training time of 119 seconds. These results show the value of using image-to-3D models in a real2sim framework for rapid, autonomous robot learning.}
+}
+
+@ARTICLE{chen2026empm,
+  author={Chen, Yunuo and Hu, Yafei and Sun, Lingfeng and Kusnur, Tushar and Herlant, Laura and Jiang, Chenfanfu},
+  journal={IEEE Robotics and Automation Letters}, 
+  title={EMPM: Embodied MPM for Modeling and Simulation of Deformable Objects}, 
+  year={2026},
+  volume={11},
+  number={4},
+  bibtex_show = {true},
+  html={https://embodied-mpm.github.io},
+  pdf = {empm_paper.pdf},
+  preview = {empm-preview.gif},
+  abstract = {Modeling deformable objects -- especially continuum materials -- in a way that is physically plausible, generalizable, and data-efficient remains challenging across 3D vision, graphics, and robotic manipulation. Many existing methods oversimplify the rich dynamics of deformable objects or require large training sets, which often limits generalization. We introduce embodied MPM (EMPM), a deformable object modeling and simulation framework built on a differentiable Material Point Method (MPM) simulator that captures the dynamics of challenging materials. From multi-view RGB-D videos, our approach reconstructs geometry and appearance, then uses an MPM physics engine to simulate object behavior by minimizing the mismatch between predicted and observed visual data. We further optimize MPM parameters online using sensory feedback, enabling adaptive, robust, and physics-aware object representations that open new possibilities for robotic manipulation of complex deformables. Experiments show that EMPM outperforms spring-mass baseline models.}
+}
+
+@article{orozco2025rino,
+  author = {Orozco, Sergio and May, Brandon B. and Kusnur, Tushar and Konidaris, George and Herlant, Laura},
+  title = {Learning Equivariant Neural-Augmented Object Dynamics from Few Interactions},
+  journal = {CoRL 2025 Workshop: Beyond Rigid Worlds: Representing and Interacting with Non-Rigid Objects},
+  year = {2025},
+  award = {Best Extended Abstract},
+  award_name = {Best Extended Abstract},
+  pdf = {rino_paper.pdf},
+  bibtex_show = {true},
+  preview = {rino-preview.gif},
+  abstract = {Learning data-efficient object dynamics models for robotic manipulation is challenging, especially for deformable bodies. Popular approaches model objects as 3D graphs and learn particle displacements using graph neural networks; however, they often require thousands of interactions. Even so, these models fail to adhere to real world physics by violating interpenetration constraints and not maintaining object shape over time. We introduce PIEGraph, a neural-augmented dynamics model capable of learning physically-grounded object dynamics for rigid and deformable bodies from few interactions. PIEGraph is a hierarchical framework built using two key layers: (1) a Physically Informed prior implemented as a spring mass system to model physically feasible particle motions over time, and (2) an action-conditioned Equivariant Graph Neural Network that exploits symmetries in particle motion and guides the physics prior. We demonstrate the ability to learn object dynamics for robotic planning on ropes, cloth, stuffed animals, and rigid bodies using only a few minutes of human interaction data.}
+}
+
+@misc{noh2025garlileo,
+      title={GaRLILEO: Gravity-aligned Radar-Leg-Inertial Enhanced Odometry}, 
+      author={Chiyun Noh and Sangwoo Jung and Hanjun Kim and Yafei Hu and Laura Herlant and Ayoung Kim},
+      year={2025},
+      journal = {arXiv preprint},
+      eprint={2511.13216},
+      archivePrefix={arXiv},
+      primaryClass={cs.RO},
+      url={https://arxiv.org/abs/2511.13216}, 
+      bibtex_show = {true},
+      html = {https://garlileo.github.io/GaRLILEO},
+      pdf = {garlileo_paper.pdf},
+      preview = {garlileo-preview.png},
+      abstract = {Deployment of legged robots for navigating challenging terrains (e.g., stairs, slopes, and unstructured environments) has gained increasing preference over wheel-based platforms. In such scenarios, accurate odometry estimation is a preliminary requirement for stable locomotion, localization, and mapping. Traditional proprioceptive approaches, which rely on leg kinematics sensor modalities and inertial sensing, suffer from irrepressible vertical drift caused by frequent contact impacts, foot slippage, and vibrations, particularly affected by inaccurate roll and pitch estimation. Existing methods incorporate exteroceptive sensors such as LiDAR or cameras. Further enhancement has been introduced by leveraging gravity vector estimation to add additional observations on roll and pitch, thereby increasing the accuracy of vertical pose estimation. However, these approaches tend to degrade in feature-sparse or repetitive scenes and are prone to errors from double-integrated IMU acceleration. To address these challenges, we propose GaRLILEO, a novel gravity-aligned continuous-time radar-leg-inertial odometry framework. GaRLILEO decouples velocity from the IMU by building a continuous-time ego-velocity spline from SoC radar Doppler and leg kinematics information, enabling seamless sensor fusion which mitigates odometry distortion. In addition, GaRLILEO can reliably capture accurate gravity vectors leveraging a novel soft S2-constrained gravity factor, improving vertical pose accuracy without relying on LiDAR or cameras. Evaluated on a self-collected real-world dataset with diverse indoor-outdoor trajectories, GaRLILEO demonstrates state-of-the-art accuracy, particularly in vertical odometry estimation on stairs and slopes. We open-source both our dataset and algorithm to foster further research in legged robot odometry and SLAM.}
+}
+
+
+@INPROCEEDINGS{herlant2016modeswitching,
+  author={Herlant, Laura V. and Holladay, Rachel M. and Srinivasa, Siddhartha S.},
+  booktitle={2016 11th ACM/IEEE International Conference on Human-Robot Interaction (HRI)}, 
+  title={Assistive teleoperation of robot arms via automatic time-optimal mode switching}, 
+  year={2016},
+  volume={},
+  number={},
+  pages={35-42},
+  keywords={Switches;Robots;Interviews;Grippers;Wrist;Computational modeling},
+  doi={10.1109/HRI.2016.7451731},
+  bibtex_show = {true},
+  html={},
+  pdf = {modeswitching_paper.pdf},
+  preview = {modeswitching-preview.png},
+  abstract = {Assistive robotic arms are increasingly enabling users with upper extremity disabilities to perform activities of daily living on their own. However, the increased capability and dexterity of the arms also makes them  harder to control with simple, low-dimensional interfaces like joysticks and sip and-puff interfaces. A common technique to control a high-dimensional system like an arm with a low-dimensional input like a joystick is through switching between multiple control modes. However, our interviews with daily users of the Kinova JACO arm identified mode switching as a key problem, both in terms of time and cognitive load. We further confirmed objectively that mode switching consumes about 17.4% of execution time even for able-bodied users controlling the JACO. Our key insight is that using even a simple model of mode switching, like time optimality, and a simple intervention, like automatically switching modes, significantly improves user satisfaction.}
+}
+
+
+@article{herlant2018thesis,
+  author = {Laura V. Herlant},
+  title = {Algorithms, Implementation, and Studies on Eating with a Shared Control Robot Arm},
+  year = {2018},
+  month = {6},
+  url = {https://kilthub.cmu.edu/articles/thesis/Algorithms_Implementation_and_Studies_on_Eating_with_a_Shared_Control_Robot_Arm/6714647},
+  doi = {10.1184/R1/6714647.v1},
+  bibtex_show = {true},
+  html={},
+  pdf = {thesis_paper.pdf},
+  preview = {thesis-preview.png},
+  abstract = {People with upper extremity disabilities are gaining increased independence through the use of assisted devices such as wheelchair-mounted robotic arms. However, the increased capability and dexterity of these robotic arms also makes them challenging to control through accessible interfaces like joysticks, sip-and-puff, and buttons that are lower-dimensional than the control space of the robot. The potential for robotics autonomy to ease the control burden within assistive domains has been recognized for decades. While full autonomy is an option, it removes all control from the user. When this is not desired by the human, the assistive technology has, in fact, made them less able and discards useful input the human might provide. For example, the leveraging of superior user situational awareness to improve system robustness could be lost. This thesis takes an in-depth dive into how to add autonomy to an assistive robot arm in the specific application of eating, and how to make it faster and more enjoyable for people with disabilities to feed themselves. While we are focused on this specific application, the tools and insights we gain can generalize to the fields of deformable object manipulation, behavior library selection, intent prediction, robot teleoperation, and human-robot interaction. The nature of the physical proximity and the heavy dependence on the robot arm for doing daily tasks creates a very high-stakes human-robot interaction. We build the foundations for a system that is capable of fully autonomous feeding by (1) predicting bite timing based on social cues,(2) detecting relevant features of the food using RGBD sensor data, and (3) automatically selecting a goal for a food-collection motion primitive to bring a bite from the plate to the operator’s mouth. We investigate the desired level of autonomy through user studies with an assistive robot where users have varying degrees of control over the bite timing, control mode-switching, and direct teleoperation of the robot to determine the effect on cognitive load, acceptance, trust, and task performance.}
+}
+
+@article{dockplacement,
+  abbr = {patent},
+  title={Systems and methods for dock placement for an autonomous mobile robot},
+  author={Herlant, Laura V. and Hild, Brent and Schneider, Ryan and Glazer, Benjamin},
+  year={2022},
+  journal={US Patent No. 11662737},
+  pdf = {dockplacement_patent.pdf},
+  preview = {dockplacement-preview.png},
+  abstract = {Described herein are systems, devices, and methods for validating location of a docking station for docking a mobile robot. In an example, a mobile robot system includes a docking station and a mobile cleaning robot. The mobile cleaning robot includes a drive system to move the mobile cleaning robot about an environment including a docking area within a distance of the docking station, and a controller circuit to detect, from an image of the docking area, a presence or absence of one or more obstacles in the docking area. A notification may be generated to inform a user about the detected obstacles. The mobile device may generate a recommendation to the user to clear the docking area or reposition the docking station, or suggest one or more candidate locations for placing the docking station.}
+}
+
+@article{learnedescapebehaviors,
+  abbr = {patent},
+  author={Herlant, Laura V. and Kuppusamy, Aravindh and Sharma, Deepak and Bichave, Kshitij and Zhou, Shao and Wong, Cheuk Wah},
+  title={Learned escape behaviors of a mobile robot},
+  year={2020},
+  pdf = {},
+  preview = {learnedbehaviors-preview.png},
+  abstract = {Described herein are systems, devices, and methods for controlling a mobile cleaning robot to escape from a stuck state using a learned robot escape behavior model. The model is trained using reinforcement learning at a cloud-computing device or networked devices. A mobile cleaning robot comprises a drive system, a sensor circuit to collect sensor data associated with a detected stuck state, and a controller circuit that can receive the trained robot escape behavior model, and apply the sensor data associated with the detected stuck state to the trained robot escape behavior model to determine an escape policy. The drive system or one or more actuators of the mobile robot can remove the mobile robot from the stuck state according to the determined escape policy.}
+}
+
+@misc{imagecapture,
+  abbr = {patent},
+  title={Image capture devices for autonomous mobile robots and related systems and methods},
+  author={Al-Mohssen, Husain and Li, Zupei and Jakubiak, Elena and Herlant, Laura V. and Halloran, Michael J. and Dean, Danielle O'Connor},
+  year={2021},
+  month={Apr},
+  journal={US Patent No. 11327483B2},
+  pdf = {imagecapture_patent.pdf},
+  preview = {imagecapture-preview.png},
+  abstract = {An autonomous cleaning robot includes a drive system to support the autonomous cleaning robot above a floor sur face, an image capture device positioned on the autonomous cleaning robot to capture imagery of a portion of the floor surface forward of the autonomous cleaning robot, and a controller operably connected to the drive system and the image capture device. The drive system is operable to maneuver the autonomous cleaning robot about the floor surface. The controller is configured to execute instructions to perform operations including initiating, based on a user selected sensitivity and the imagery captured by the image capture device, an avoidance behavior to avoid an obstacle on the portion of the floor surface.}
 }
 
 
