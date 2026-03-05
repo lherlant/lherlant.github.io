@@ -21,9 +21,9 @@
 @article{abouchakra2025realissim,
       title={Real-is-Sim: Bridging the Sim-to-Real Gap with a Dynamic Digital Twin}, 
       author={Jad Abou-Chakra and Lingfeng Sun and Krishan Rana and Brandon May and Karl Schmeckpeper and Niko Suenderhauf and Maria Vittoria Minniti and Laura Herlant},
-      year={2025},
+      year={2026},
       html={https://realissim.rai-inst.com/}, 
-      journal = {2025 IEEE International Conference on Robotics and Automation (ICRA)},
+      journal = {2026 IEEE International Conference on Robotics and Automation (ICRA)},
       pdf = {realissim_paper.pdf},
       abstract = {We introduce real-is-sim, a new approach to integrating simulation into behavior cloning pipelines. In contrast to real-only methods, which lack the ability to safely test policies before deployment, and sim-to-real methods, which require complex adaptation to cross the sim-to-real gap, our framework allows policies to seamlessly switch between running on real hardware and running in parallelized virtual environments. At the center of real-is-sim is a dynamic digital twin, powered by the Embodied Gaussian simulator, that synchronizes with the real world at 60Hz. This twin acts as a mediator between the behavior cloning policy and the real robot. Policies are trained using representations derived from simulator states and always act on the simulated robot, never the real one. During deployment, the real robot simply follows the simulated robot’s joint states, and the simulation is continuously corrected with real world measurements. This setup, where the simulator drives all policy execution and maintains real-time synchronization with the physical world, shifts the responsibility of crossing the sim-to-real gap to the digital twin’s synchronization mechanisms, instead of the policy itself. We demonstrate real-is-sim on a long-horizon manipulation task (PushT), showing that virtual evaluations are consistent with real-world results. We further show how real-world data can be augmented with virtual rollouts and compare to policies trained on different representations derived from the simulator state including object poses and rendered images from both static and robot-mounted cameras. Our results highlight the flexibility of the real-is-sim framework across training, evaluation, and deployment stages.},
       bibtex_show = {true},
@@ -43,6 +43,7 @@
   html={https://zerobot-rl.github.io/},
   pdf = {zerobot_paper.pdf},
   preview = {zerobot-preview.gif},
+  selected        = {true},
   abstract = {We present ZeroBot, a real2sim framework for learning a robot manipulation task from scratch in minutes under challenging conditions: zero human demonstrations, zero policy pre-training, and zero known object models. Given only a single view of an object and a goal pose for that object, ZeroBot uses image-to-3D generative models to obtain a complete object mesh, which is used in simulation for large-scale parallel reinforcement learning. To accelerate training, we introduce an action space which leverages the generated geometry and learned value function to sample states involving robot-object contact. When evaluated on real-world tasks including grasping, pushing, articulated object interaction, and multi-stage manipulation, ZeroBot achieves an 87% success rate with an average training time of 119 seconds. These results show the value of using image-to-3D models in a real2sim framework for rapid, autonomous robot learning.}
 }
 
@@ -57,6 +58,7 @@
   html={https://embodied-mpm.github.io},
   pdf = {empm_paper.pdf},
   preview = {empm-preview.gif},
+  selected        = {true},
   abstract = {Modeling deformable objects -- especially continuum materials -- in a way that is physically plausible, generalizable, and data-efficient remains challenging across 3D vision, graphics, and robotic manipulation. Many existing methods oversimplify the rich dynamics of deformable objects or require large training sets, which often limits generalization. We introduce embodied MPM (EMPM), a deformable object modeling and simulation framework built on a differentiable Material Point Method (MPM) simulator that captures the dynamics of challenging materials. From multi-view RGB-D videos, our approach reconstructs geometry and appearance, then uses an MPM physics engine to simulate object behavior by minimizing the mismatch between predicted and observed visual data. We further optimize MPM parameters online using sensory feedback, enabling adaptive, robust, and physics-aware object representations that open new possibilities for robotic manipulation of complex deformables. Experiments show that EMPM outperforms spring-mass baseline models.}
 }
 
