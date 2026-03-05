@@ -9,12 +9,12 @@ ninja.data = [{
     handler: () => {
       window.location.href = "/";
     },
-  },{id: "nav-blog",
-          title: "blog",
+  },{id: "nav-news",
+          title: "news",
           description: "",
           section: "Navigation",
           handler: () => {
-            window.location.href = "/blog/";
+            window.location.href = "/news/";
           },
         },{id: "nav-publications",
           title: "publications",
@@ -405,16 +405,26 @@ ninja.data = [{
           description: "",
           section: "Books",handler: () => {
               window.location.href = "/books/the_godfather/";
-            },},{id: "news-a-simple-inline-announcement",
-          title: 'A simple inline announcement.',
+            },},{id: "news-contributing-author-and-exhibitor-at-corl-2025-in-soeul-south-korea-paper-learning-equivariant-neural-augmented-object-dynamics-from-few-interactions",
+          title: 'Contributing Author and Exhibitor at CoRL 2025 in Soeul, South Korea. Paper: Learning...',
           description: "",
-          section: "News",},{id: "news-a-long-announcement-with-details",
-          title: 'A long announcement with details',
+          section: "News",},{id: "news-panelist-for-women-in-robotics-fall-meetup-organized-by-massrobotics",
+          title: 'Panelist for Women in Robotics Fall Meetup organized by MassRobotics.',
           description: "",
-          section: "News",handler: () => {
-              window.location.href = "/news/announcement_2/";
-            },},{id: "news-a-simple-inline-announcement-with-markdown-emoji-sparkles-smile",
-          title: 'A simple inline announcement with Markdown emoji! :sparkles: :smile:',
+          section: "News",},{id: "news-keynote-speaker-for-nerc-2025-at-cornell-university-presenting-world-understanding-for-robotics",
+          title: 'Keynote Speaker for NERC 2025 at Cornell University, presenting “World Understanding for Robotics”....',
+          description: "",
+          section: "News",},{id: "news-participant-at-the-international-conference-on-computer-vision-iccv-2025",
+          title: 'Participant at the International Conference on Computer Vision (ICCV) 2025.',
+          description: "",
+          section: "News",},{id: "news-organizer-and-moderater-for-multiple-career-paths-to-robotics-panel-at-ghc-2025",
+          title: 'Organizer and Moderater for “Multiple Career Paths to Robotics Panel” at GHC 2025....',
+          description: "",
+          section: "News",},{id: "news-panelist-at-the-spring-2026-hertz-foundation-board-and-concil-dinner-on-the-future-of-robotics",
+          title: 'Panelist at the Spring 2026 Hertz Foundation Board and Concil Dinner on the...',
+          description: "",
+          section: "News",},{id: "news-presenting-author-at-icra-2026-in-vienna-austria-paper-real-is-sim-bridging-the-sim-to-real-gap-with-a-dynamic-digital-twin",
+          title: 'Presenting Author at ICRA 2026 in Vienna, Austria. Paper: Real-is-Sim: Bridging the Sim-to-Real...',
           description: "",
           section: "News",},{id: "projects-project-1",
           title: 'project 1',
