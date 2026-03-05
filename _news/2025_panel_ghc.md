@@ -5,5 +5,5 @@ inline: true
 related_posts: false
 ---
 
-Organizer and Moderater for "Multiple Career Paths to Robotics Panel" at [GHC 2025](https://ghc.anitab.org/).
+Organizer and Moderator for "Multiple Career Paths to Robotics Panel" at [GHC 2025](https://ghc.anitab.org/).
 
