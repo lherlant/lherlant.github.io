@@ -5,5 +5,5 @@ inline: true
 related_posts: false
 ---
 
-Organizer and Moderator for "Multiple Career Paths to Robotics Panel" at [GHC 2025](https://ghc.anitab.org/).
+Organizer and Moderator for "Multiple Career Paths to Robotics" panel at the Grace Hopper Celebration ([GHC](https://ghc.anitab.org/)) in Chicago, IL.
 

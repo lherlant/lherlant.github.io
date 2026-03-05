@@ -5,5 +5,5 @@ inline: true
 related_posts: false
 ---
 
-Panelist for Women in Robotics Fall Meetup organized by [MassRobotics](https://www.massrobotics.org/).
+Panelist for Women in Robotics Fall Meetup organized by [MassRobotics](https://www.massrobotics.org/) in Cambridge, MA.
 

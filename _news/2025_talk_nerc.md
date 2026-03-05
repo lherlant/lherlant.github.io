@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Keynote Speaker for [NERC 2025](https://nerc2025.cis.cornell.edu/) at Cornell University, presenting "World Understanding for Robotics".
+Keynote Speaker for the Northeast Robotics Colloquium ([NERC](https://nerc2025.cis.cornell.edu/)) at Cornell University, presenting "World Understanding for Robotics".
